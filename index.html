@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>QR Code generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+  <body>
+
+    <div class="page-bg">
+
+        <section class="generator-card">
+
+            <!-- Header -->
+
+            <div class="page-header">
+
+                <div class="header-icon">
+
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+
+                        <path d="M3 3H10V10H3V3ZM14 3H21V10H14V3ZM3 14H10V21H3V14ZM17 14H19V16H17V14ZM14 17H16V19H14V17ZM17 17H21V21H17V17Z"
+                            stroke="#003BC0"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"/>
+
+                    </svg>
+
+                </div>
+
+                <div class="header-content">
+
+                    <h1>QR Code Generator</h1>
+
+                    <p>
+                        Create beautiful QR Codes for URLs, text and more.
+                        Customize colors and size before downloading.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <!-- Controls -->
+
+            <div class="controls-grid">
+
+                <div class="field">
+
+                    <label>Background Color</label>
+
+                    <div class="control-box">
+
+                        <input type="color" class="light" value="#ffffff"/>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>Foreground Color</label>
+
+                    <div class="control-box">
+
+                        <input type="color" class="dark"/>
+
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+
+                    <label>QR Size</label>
+
+                    <div class="control-box">
+
+                        <select class="sizes">
+
+                            <option value="100">100 × 100</option>
+                            <option value="200">200 × 200</option>
+                            <option value="300">300 × 300</option>
+                            <option selected value="400">400 × 400</option>
+                            <option value="500">500 × 500</option>
+                            <option value="600">600 × 600</option>
+                            <option value="700">700 × 700</option>
+                            <option value="800">800 × 800</option>
+                            <option value="900">900 × 900</option>
+                            <option value="1000">1000 × 1000</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Text Input -->
+
+            <div class="input-section">
+
+                <label>Enter URL or Text</label>
+
+                <div class="text-box">
+
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+
+                        <path d="M10 13A5 5 0 0 1 10 6L12 4A5 5 0 1 1 19 11L17 13"
+                            stroke="#003BC0"
+                            stroke-width="2"
+                            stroke-linecap="round"/>
+
+                        <path d="M14 11A5 5 0 0 1 14 18L12 20A5 5 0 1 1 5 13L7 11"
+                            stroke="#003BC0"
+                            stroke-width="2"
+                            stroke-linecap="round"/>
+
+                    </svg>
+
+                    <input
+                        type="text"
+                        class="qr-text"
+                        placeholder="Enter website URL or text..." />
+
+                </div>
+
+            </div>
+
+
+            <!-- QR Result -->
+
+            <div class="qr-section">
+
+                <div class="qr-title">
+
+                    Generated QR Code
+
+                </div>
+
+                <div class="qr-container">
+
+                    <div id="qr-code"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="action-container">
+
+                <a href="#" download="QRCode" class="download btn">
+
+                    <img src="./assets/icons/download.svg" alt="">
+
+                    <span>Download</span>
+
+                </a>
+
+                <button class="share-btn btn">
+
+                    <img src="./assets/icons/share.svg" alt="">
+
+                    <span>Share</span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <footer class="footer-note">
+
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+
+                <path d="M12 3L4 7V12C4 17 7.5 21.5 12 23C16.5 21.5 20 17 20 12V7L12 3Z"
+                    stroke="#003BC0"
+                    stroke-width="2"/>
+
+            </svg>
+
+            <span>Your QR code is generated locally in your browser. We never store your data.</span>
+
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script defer src="./main.js"></script>
+
+</body>
+</html>
